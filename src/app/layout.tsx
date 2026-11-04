@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Suspense fallback={null}>
           <NavigationFeedback />
         </Suspense>
-        {children}
+        <div id="app-content">{children}</div>
       </body>
     </html>
   );
