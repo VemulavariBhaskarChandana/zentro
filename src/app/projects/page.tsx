@@ -26,13 +26,13 @@ export default async function ProjectsPage({
   return (
     <PlatformShell>
       <div className="mb-8 max-w-2xl">
-        <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#927016]">
+        <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#454545]">
           Find your next learning step
         </p>
         <h1 className="mt-2 text-3xl font-semibold tracking-[-0.06em]">
           All Projects
         </h1>
-        <p className="mt-3 text-sm leading-7 text-[#77736a] sm:text-base">
+        <p className="mt-3 text-sm leading-7 text-[#666666] sm:text-base">
           Explore the full project catalog, or narrow it to major projects and
           advanced challenges.
         </p>
@@ -45,9 +45,9 @@ export default async function ProjectsPage({
             projects={result.data}
           />
         ) : (
-          <div className="rounded-2xl border border-dashed border-[#d9cfba] bg-[#faf7f0] p-8 text-center">
+          <div className="rounded-2xl border border-dashed border-[#e4e4e2] bg-[#fcfcfb] p-8 text-center">
             <h2 className="font-semibold">No projects published yet</h2>
-            <p className="mt-2 text-sm text-[#77736a]">
+            <p className="mt-2 text-sm text-[#666666]">
               Projects will appear here when the catalog is ready.
             </p>
           </div>

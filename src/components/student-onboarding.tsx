@@ -11,7 +11,6 @@ import {
   CheckCircle2,
   Cloud,
   Code2,
-  Compass,
   Cpu,
   Database,
   FolderKanban,
@@ -68,15 +67,15 @@ const interestIcons: Record<(typeof interestAreas)[number], LucideIcon> = {
 };
 
 const fieldClass =
-  "min-h-12 w-full rounded-xl border border-[#ded7c9] bg-[#fffefa] px-4 text-sm text-[#24221e] outline-none transition focus:border-[#d6a72c] focus:ring-4 focus:ring-[#d6a72c]/15";
+  "min-h-12 w-full rounded-xl border border-[#e2e2e0] bg-[#ffffff] px-4 text-sm text-[#1b1b1b] outline-none transition focus:border-[#e5e5e3] focus:ring-4 focus:ring-[#e5e5e3]/15";
 
 const fieldLabelClass =
-  "mb-2 block text-sm font-semibold text-[#4b473f]";
+  "mb-2 block text-sm font-semibold text-[#404040]";
 
 const optionCardClass =
-  "flex h-full cursor-pointer items-start gap-3 rounded-2xl border border-[#e8e1d4] bg-[#fffdf8] p-4 text-left transition hover:-translate-y-0.5 hover:border-[#d6a72c]/70 hover:shadow-[0_8px_20px_rgba(59,46,20,0.06)] active:scale-[0.99]";
+  "flex h-full cursor-pointer items-start gap-3 rounded-2xl border border-[#e4e4e2] bg-[#ffffff] p-4 text-left transition hover:-translate-y-0.5 hover:border-[#e5e5e3]/70 hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)] active:scale-[0.99]";
 const optionFocusClass =
-  "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#d6a72c]/25";
+  "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#e5e5e3]/25";
 
 function ChoiceIndicator({ selected }: { selected: boolean }) {
   return (
@@ -84,8 +83,8 @@ function ChoiceIndicator({ selected }: { selected: boolean }) {
       aria-hidden="true"
       className={`mt-0.5 grid size-5 shrink-0 place-items-center rounded-full border ${
         selected
-          ? "border-[#d6a72c] bg-[#d6a72c] text-[#24221e]"
-          : "border-[#d6d0c4] bg-white"
+          ? "border-[#e5e5e3] bg-[#e5e5e3] text-[#1b1b1b]"
+          : "border-[#d8d8d6] bg-white"
       }`}
     >
       {selected ? <Check size={13} strokeWidth={3} /> : null}
@@ -178,40 +177,37 @@ export function StudentOnboarding({
   const inputId = (name: string) => `onboarding-${name}`;
 
   return (
-    <main className="min-h-screen bg-[#f5f0e6] px-4 py-6 text-[#24221e] sm:px-7 sm:py-10">
+    <main className="min-h-screen bg-[#f7f7f5] px-4 py-6 text-[#1b1b1b] sm:px-7 sm:py-10">
       <div className="mx-auto w-full max-w-4xl">
         <header className="mb-7 flex flex-col items-start justify-between gap-4 sm:mb-10 sm:flex-row sm:items-center">
           <Link
             aria-label="ZENTRO home"
-            className="inline-flex items-center gap-3 text-sm font-extrabold tracking-[0.2em] text-[#24221e] no-underline"
+            className="inline-flex items-center gap-3 text-sm font-extrabold tracking-[0.2em] text-[#1b1b1b] no-underline"
             href="/"
           >
-            <span className="grid size-10 place-items-center rounded-2xl bg-[#d6a72c] text-white shadow-[0_7px_18px_rgba(161,119,19,0.2)]">
-              <Compass size={21} />
-            </span>
             ZENTRO
           </Link>
-          <span className="rounded-full border border-[#e5dccb] bg-[#faf7f0] px-3 py-1.5 text-xs font-medium text-[#77736a] sm:px-4 sm:text-sm">
+          <span className="rounded-full border border-[#e4e4e2] bg-[#fcfcfb] px-3 py-1.5 text-xs font-medium text-[#666666] sm:px-4 sm:text-sm">
             Student onboarding
           </span>
         </header>
 
         <section
           aria-busy={isSaving}
-          className="rounded-[1.65rem] border border-[#e8e1d4] bg-[#faf7f0] p-5 shadow-[0_24px_70px_rgba(59,46,20,0.08)] sm:p-9 md:p-11"
+          className="rounded-[1.65rem] border border-[#e4e4e2] bg-[#fcfcfb] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.08)] sm:p-9 md:p-11"
         >
           {isComplete ? (
             <div className="mx-auto max-w-xl py-8 text-center sm:py-12">
-              <span className="mx-auto mb-6 grid size-16 place-items-center rounded-3xl bg-[#d6a72c]/20 text-[#9a7212]">
+              <span className="mx-auto mb-6 grid size-16 place-items-center rounded-3xl bg-[#e5e5e3]/20 text-[#454545]">
                 <CheckCircle2 size={32} />
               </span>
-              <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#967017]">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#454545]">
                 Your profile is ready
               </p>
               <h1 className="text-3xl font-semibold tracking-[-0.055em] sm:text-4xl">
                 You&apos;re all set!
               </h1>
-              <p className="mx-auto mt-3 max-w-md text-sm leading-7 text-[#77736a] sm:text-base">
+              <p className="mx-auto mt-3 max-w-md text-sm leading-7 text-[#666666] sm:text-base">
                 Let&apos;s find the right project for you.
               </p>
               <Button
@@ -240,7 +236,7 @@ export function StudentOnboarding({
           ) : (
             <>
               <div className="mb-8">
-                <div className="mb-2 flex flex-col items-start gap-1 text-xs font-semibold text-[#77736a] sm:flex-row sm:items-center sm:justify-between sm:text-sm">
+                <div className="mb-2 flex flex-col items-start gap-1 text-xs font-semibold text-[#666666] sm:flex-row sm:items-center sm:justify-between sm:text-sm">
                   <span>
                     Step {step + 1} of {steps.length}
                   </span>
@@ -259,7 +255,7 @@ export function StudentOnboarding({
                     <span
                       aria-label={label}
                       className={`h-1.5 rounded-full transition-colors ${
-                        index <= step ? "bg-[#d6a72c]" : "bg-[#e7e0d3]"
+                        index <= step ? "bg-[#e5e5e3]" : "bg-[#e4e4e2]"
                       }`}
                       key={label}
                     />
@@ -268,7 +264,7 @@ export function StudentOnboarding({
               </div>
 
               <div className="mb-7">
-                <p className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#987319]">
+                <p className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#454545]">
                   <Sparkles size={14} />
                   Build your path
                 </p>
@@ -282,7 +278,7 @@ export function StudentOnboarding({
                   {step === 3 && "Follow your curiosity"}
                   {step === 4 && "Make it yours"}
                 </h1>
-                <p className="mt-2 text-sm leading-6 text-[#77736a] sm:text-base">
+                <p className="mt-2 text-sm leading-6 text-[#666666] sm:text-base">
                   {step === 0 &&
                     "Tell us a bit about your studies so we can tailor your experience."}
                   {step === 1 && "What type of project are you looking for?"}
@@ -297,7 +293,7 @@ export function StudentOnboarding({
 
               {(!databaseConfigured || initialLoadError) && (
                 <div
-                  className="mb-6 rounded-xl border border-[#ead6a9] bg-[#fff8e9] px-4 py-3 text-sm leading-6 text-[#765b1a]"
+                  className="mb-6 rounded-xl border border-[#e4e4e2] bg-[#f7f7f6] px-4 py-3 text-sm leading-6 text-[#555555]"
                   role="status"
                 >
                   {initialLoadError ??
@@ -440,7 +436,7 @@ export function StudentOnboarding({
                         aria-pressed={data.projectType === option}
                         className={`${optionCardClass} ${optionFocusClass} ${
                           data.projectType === option
-                            ? "border-[#d6a72c] bg-[#fff9e9] ring-2 ring-[#d6a72c]/20"
+                            ? "border-[#e5e5e3] bg-[#f1f1ef] ring-2 ring-[#e5e5e3]/20"
                             : ""
                         }`}
                         key={option}
@@ -449,10 +445,10 @@ export function StudentOnboarding({
                       >
                         <ChoiceIndicator selected={data.projectType === option} />
                         <span>
-                          <span className="block text-sm font-semibold text-[#24221e]">
+                          <span className="block text-sm font-semibold text-[#1b1b1b]">
                             {option}
                           </span>
-                          <span className="mt-1 block text-xs leading-5 text-[#77736a] sm:text-sm">
+                          <span className="mt-1 block text-xs leading-5 text-[#666666] sm:text-sm">
                             {projectDescriptions[option]}
                           </span>
                         </span>
@@ -468,7 +464,7 @@ export function StudentOnboarding({
                         aria-pressed={data.technicalLevel === option}
                         className={`${optionCardClass} ${optionFocusClass} ${
                           data.technicalLevel === option
-                            ? "border-[#d6a72c] bg-[#fff9e9] ring-2 ring-[#d6a72c]/20"
+                            ? "border-[#e5e5e3] bg-[#f1f1ef] ring-2 ring-[#e5e5e3]/20"
                             : ""
                         }`}
                         key={option}
@@ -478,7 +474,7 @@ export function StudentOnboarding({
                         <ChoiceIndicator
                           selected={data.technicalLevel === option}
                         />
-                        <span className="pt-0.5 text-sm font-semibold text-[#24221e]">
+                        <span className="pt-0.5 text-sm font-semibold text-[#1b1b1b]">
                           {option}
                         </span>
                       </button>
@@ -488,7 +484,7 @@ export function StudentOnboarding({
 
                 {step === 3 && (
                   <div>
-                    <p className="mb-3 text-xs font-medium text-[#77736a]">
+                    <p className="mb-3 text-xs font-medium text-[#666666]">
                       Select all that apply
                       {data.interests.length
                         ? ` · ${data.interests.length} selected`
@@ -503,7 +499,7 @@ export function StudentOnboarding({
                             aria-pressed={selected}
                             className={`${optionCardClass} ${optionFocusClass} items-center ${
                               selected
-                                ? "border-[#d6a72c] bg-[#fff9e9] ring-2 ring-[#d6a72c]/20"
+                                ? "border-[#e5e5e3] bg-[#f1f1ef] ring-2 ring-[#e5e5e3]/20"
                                 : ""
                             }`}
                             key={option}
@@ -515,8 +511,8 @@ export function StudentOnboarding({
                             }}
                             type="button"
                           >
-                            <Icon className="shrink-0 text-[#9a741a]" size={18} />
-                            <span className="flex-1 text-left text-sm font-medium leading-5 text-[#3d3932]">
+                            <Icon className="shrink-0 text-[#454545]" size={18} />
+                            <span className="flex-1 text-left text-sm font-medium leading-5 text-[#333333]">
                               {option}
                             </span>
                             <ChoiceIndicator selected={selected} />
@@ -542,7 +538,7 @@ export function StudentOnboarding({
                             aria-pressed={data.hasProjectIdea === option.value}
                             className={`${optionCardClass} ${optionFocusClass} items-center ${
                               data.hasProjectIdea === option.value
-                                ? "border-[#d6a72c] bg-[#fff9e9] ring-2 ring-[#d6a72c]/20"
+                                ? "border-[#e5e5e3] bg-[#f1f1ef] ring-2 ring-[#e5e5e3]/20"
                                 : ""
                             }`}
                             key={option.label}
@@ -572,7 +568,7 @@ export function StudentOnboarding({
                             aria-pressed={data.projectGoal === goal}
                             className={`${optionCardClass} ${optionFocusClass} items-center py-3 ${
                               data.projectGoal === goal
-                                ? "border-[#d6a72c] bg-[#fff9e9] ring-2 ring-[#d6a72c]/20"
+                                ? "border-[#e5e5e3] bg-[#f1f1ef] ring-2 ring-[#e5e5e3]/20"
                                 : ""
                             }`}
                             key={goal}
@@ -594,7 +590,7 @@ export function StudentOnboarding({
                         htmlFor={inputId("requirements")}
                       >
                         Any additional requirements?{" "}
-                        <span className="font-normal text-[#8d887d]">
+                        <span className="font-normal text-[#777777]">
                           (Optional)
                         </span>
                       </label>
@@ -610,7 +606,7 @@ export function StudentOnboarding({
                         value={data.additionalRequirements}
                       />
                       <p
-                        className="mt-1.5 text-right text-xs text-[#8d887d]"
+                        className="mt-1.5 text-right text-xs text-[#777777]"
                         id="onboarding-requirements-count"
                       >
                         {data.additionalRequirements.length}/2,000
@@ -620,7 +616,7 @@ export function StudentOnboarding({
                 )}
               </div>
 
-              <footer className="mt-9 flex items-center justify-between gap-3 border-t border-[#e8e1d4] pt-5">
+              <footer className="mt-9 flex items-center justify-between gap-3 border-t border-[#e4e4e2] pt-5">
                 {step > 0 ? (
                   <Button
                     className="min-h-11"
@@ -636,7 +632,7 @@ export function StudentOnboarding({
                     Back
                   </Button>
                 ) : (
-                  <span className="text-xs text-[#8d887d]">
+                  <span className="text-xs text-[#777777]">
                     You can go back and change your answers
                   </span>
                 )}
@@ -676,8 +672,8 @@ export function StudentOnboarding({
           )}
         </section>
 
-        <p className="mx-auto mt-5 flex max-w-2xl items-center justify-center gap-2 text-center text-xs leading-5 text-[#8d887d]">
-          <FolderKanban className="shrink-0 text-[#a77c13]" size={15} />
+        <p className="mx-auto mt-5 flex max-w-2xl items-center justify-center gap-2 text-center text-xs leading-5 text-[#777777]">
+          <FolderKanban className="shrink-0 text-[#454545]" size={15} />
           Your answers help us recommend projects that fit your goals and
           experience.
         </p>

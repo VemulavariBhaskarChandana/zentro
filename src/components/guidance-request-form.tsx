@@ -106,14 +106,14 @@ export function GuidanceRequestForm({
 
       <div className="sm:col-span-2">
         <label
-          className="mb-2 block text-sm font-semibold text-[#4b473f]"
+          className="mb-2 block text-sm font-semibold text-[#404040]"
           htmlFor="guidance-message"
         >
           What would you like help with?
         </label>
         <textarea
           autoComplete="off"
-          className="min-h-32 w-full resize-y rounded-xl border border-[#ded7c9] bg-[#fffefa] px-4 py-3 text-sm leading-6 outline-none focus:border-[#d6a72c] focus:ring-4 focus:ring-[#d6a72c]/15"
+          className="min-h-32 w-full resize-y rounded-xl border border-[#e2e2e0] bg-[#ffffff] px-4 py-3 text-sm leading-6 outline-none focus:border-[#e5e5e3] focus:ring-4 focus:ring-[#e5e5e3]/15"
           id="guidance-message"
           maxLength={1200}
           name="message"
@@ -121,12 +121,12 @@ export function GuidanceRequestForm({
           placeholder="For example: I want to build a simple website but I’m not sure which tools to choose."
           required
         />
-        <p className="mt-1.5 text-right text-xs text-[#8d887d]">
+        <p className="mt-1.5 text-right text-xs text-[#777777]">
           {messageLength}/1,200
         </p>
       </div>
 
-      <p className="text-xs leading-5 text-[#77736a] sm:col-span-2">
+      <p className="text-xs leading-5 text-[#666666] sm:col-span-2">
         Your request and contact details will be saved in ZENTRO when you submit
         this form.
       </p>
@@ -168,14 +168,14 @@ function Field({
   return (
     <div>
       <label
-        className="mb-2 block text-sm font-semibold text-[#4b473f]"
+        className="mb-2 block text-sm font-semibold text-[#404040]"
         htmlFor={id}
       >
         {label}
       </label>
       <input
         autoComplete={name === "phone" ? "tel" : name}
-        className="min-h-12 w-full rounded-xl border border-[#ded7c9] bg-[#fffefa] px-4 text-sm outline-none focus:border-[#d6a72c] focus:ring-4 focus:ring-[#d6a72c]/15 read-only:bg-[#f2eee5]"
+        className="min-h-12 w-full rounded-xl border border-[#e2e2e0] bg-[#ffffff] px-4 text-sm outline-none focus:border-[#e5e5e3] focus:ring-4 focus:ring-[#e5e5e3]/15 read-only:bg-[#f1f1ef]"
         defaultValue={defaultValue}
         id={id}
         maxLength={name === "phone" ? 40 : name === "name" ? 120 : name === "college" ? 180 : 120}

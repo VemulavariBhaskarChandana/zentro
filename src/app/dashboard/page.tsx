@@ -44,11 +44,11 @@ async function DashboardContent() {
   const displayName = studentName?.trim() || "there";
   return (
     <PlatformShell>
-      <header className="mb-8 rounded-[1.65rem] border border-[#e7d9b8] bg-[#f7edda] px-6 py-7 sm:px-9 sm:py-9">
+      <header className="mb-8 rounded-[1.65rem] border border-[#e4e4e2] bg-[#f4f4f2] px-6 py-7 sm:px-9 sm:py-9">
         <h1 className="text-3xl font-semibold tracking-[-0.06em] sm:text-4xl">
           Welcome back, {displayName}!
         </h1>
-        <p className="mt-3 max-w-2xl text-sm leading-7 text-[#6f685c] sm:text-base">
+        <p className="mt-3 max-w-2xl text-sm leading-7 text-[#666666] sm:text-base">
           Explore different technologies and discover what you can build.
         </p>
       </header>
@@ -70,7 +70,7 @@ async function DashboardContent() {
           >
             Explore Categories
           </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-[#77736a] sm:text-base">
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-[#666666] sm:text-base">
             Pick a topic that sounds interesting. Each one has beginner-friendly
             project ideas to help you get started.
           </p>
@@ -83,9 +83,9 @@ async function DashboardContent() {
               ))}
             </div>
           ) : (
-            <div className="rounded-2xl border border-dashed border-[#d9cfba] bg-[#faf7f0] p-8 text-center">
+            <div className="rounded-2xl border border-dashed border-[#e4e4e2] bg-[#fcfcfb] p-8 text-center">
               <h3 className="font-semibold">No categories published yet</h3>
-              <p className="mt-2 text-sm text-[#77736a]">
+              <p className="mt-2 text-sm text-[#666666]">
                 New learning areas will appear here when they are ready.
               </p>
             </div>
@@ -95,21 +95,21 @@ async function DashboardContent() {
         )}
       </section>
 
-      <section className="mt-10 rounded-[1.5rem] border border-[#ddc687] bg-[#f1e7cb] p-6 sm:p-8">
-        <p className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#886510]">
+      <section className="mt-10 rounded-[1.5rem] border border-[#dededb] bg-[#ebebea] p-6 sm:p-8">
+        <p className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#454545]">
           <Lightbulb size={15} />
           Personal mentoring
         </p>
         <h2 className="text-2xl font-semibold tracking-[-0.045em]">
           Need more guidance?
         </h2>
-        <p className="mt-3 max-w-3xl text-sm leading-7 text-[#6f685c]">
+        <p className="mt-3 max-w-3xl text-sm leading-7 text-[#666666]">
           Tell us what you want to build or where you feel stuck. A mentor can
           help you choose technologies, plan the next steps, and get started
           with confidence.
         </p>
         <Link
-          className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#d6a72c] px-5 text-sm font-semibold text-[#24221e] no-underline transition hover:bg-[#e0b53e] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#d6a72c]/30"
+          className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#e5e5e3] px-5 text-sm font-semibold text-[#1b1b1b] no-underline transition hover:bg-[#d8d8d5] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#e5e5e3]/30"
           href="/guidance"
         >
           Ask for guidance
@@ -125,12 +125,12 @@ function DashboardLoading() {
     <PlatformShell>
       <div aria-busy="true" className="animate-pulse space-y-8" role="status">
         <span className="sr-only">Loading your ZENTRO dashboard…</span>
-        <div className="h-36 rounded-[1.65rem] border border-[#e7d9b8] bg-[#f7edda]" />
-        <div className="h-8 w-56 rounded bg-[#e8e1d4]" />
+        <div className="h-36 rounded-[1.65rem] border border-[#e4e4e2] bg-[#f4f4f2]" />
+        <div className="h-8 w-56 rounded bg-[#e4e4e2]" />
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {Array.from({ length: 6 }, (_, index) => (
             <div
-              className="h-64 rounded-2xl border border-[#e8e1d4] bg-[#faf7f0]"
+              className="h-64 rounded-2xl border border-[#e4e4e2] bg-[#fcfcfb]"
               key={index}
             />
           ))}

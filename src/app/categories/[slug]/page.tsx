@@ -29,7 +29,7 @@ export default async function CategoryDetailPage({
   return (
     <PlatformShell>
       <Link
-        className="mb-7 inline-flex items-center gap-2 text-sm font-semibold text-[#796018] no-underline hover:underline"
+        className="mb-7 inline-flex items-center gap-2 text-sm font-semibold text-[#555555] no-underline hover:underline"
         href="/categories"
       >
         <ArrowLeft size={16} />
@@ -39,20 +39,20 @@ export default async function CategoryDetailPage({
         <CatalogStatus result={categoryResult} itemName="category details" />
       ) : (
         <>
-          <section className="rounded-[1.65rem] border border-[#e7d9b8] bg-[#f7edda] p-6 sm:p-9">
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#927016]">
+          <section className="rounded-[1.65rem] border border-[#e4e4e2] bg-[#f4f4f2] p-6 sm:p-9">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#454545]">
               {categoryResult.data.name}
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-[-0.06em] sm:text-4xl">
               What is this technology?
             </h1>
-            <p className="mt-4 max-w-3xl text-sm leading-7 text-[#6f685c] sm:text-base">
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-[#666666] sm:text-base">
               {categoryResult.data.name}: {categoryResult.data.description}
             </p>
-            <div className="mt-6 grid gap-4 border-t border-[#e5d7b8] pt-5 sm:grid-cols-2">
+            <div className="mt-6 grid gap-4 border-t border-[#e4e4e2] pt-5 sm:grid-cols-2">
               <div>
                 <h2 className="text-sm font-semibold">What can you build?</h2>
-                <p className="mt-1 text-sm leading-6 text-[#6f685c]">
+                <p className="mt-1 text-sm leading-6 text-[#666666]">
                   {categoryResult.data.build_examples}
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default async function CategoryDetailPage({
                 <p className="mt-2 flex flex-wrap gap-2">
                   {categoryResult.data.technologies.map((technology) => (
                     <span
-                      className="rounded-full border border-[#dfd2b7] bg-[#fff9ed] px-3 py-1 text-xs font-medium text-[#6e5d36]"
+                      className="rounded-full border border-[#e4e4e2] bg-[#f7f7f6] px-3 py-1 text-xs font-medium text-[#555555]"
                       key={technology}
                     >
                       {technology}
@@ -74,7 +74,7 @@ export default async function CategoryDetailPage({
 
           <section className="mt-9">
             <div className="mb-5">
-              <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#927016]">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#454545]">
                 Pick a starting point
               </p>
               <h2 className="mt-1 text-2xl font-semibold tracking-[-0.04em]">
@@ -89,9 +89,9 @@ export default async function CategoryDetailPage({
                   ))}
                 </div>
               ) : (
-                <div className="rounded-2xl border border-dashed border-[#d9cfba] bg-[#faf7f0] p-8 text-center">
+                <div className="rounded-2xl border border-dashed border-[#e4e4e2] bg-[#fcfcfb] p-8 text-center">
                   <h3 className="font-semibold">No projects in this category yet</h3>
-                  <p className="mt-2 text-sm text-[#77736a]">
+                  <p className="mt-2 text-sm text-[#666666]">
                     Try another category or come back when more projects are
                     published.
                   </p>

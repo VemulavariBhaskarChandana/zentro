@@ -29,7 +29,7 @@ export default async function GuidancePage({
   return (
     <PlatformShell>
       <Link
-        className="mb-7 inline-flex items-center gap-2 text-sm font-semibold text-[#796018] no-underline hover:underline"
+        className="mb-7 inline-flex items-center gap-2 text-sm font-semibold text-[#555555] no-underline hover:underline"
         href={projectSlug ? `/projects/${projectSlug}` : "/dashboard"}
       >
         <ArrowLeft size={16} />
@@ -37,24 +37,24 @@ export default async function GuidancePage({
       </Link>
 
       <div className="mx-auto max-w-3xl">
-        <header className="rounded-[1.65rem] border border-[#e7d9b8] bg-[#f7edda] p-6 sm:p-9">
-          <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#886510]">
+        <header className="rounded-[1.65rem] border border-[#e4e4e2] bg-[#f4f4f2] p-6 sm:p-9">
+          <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#454545]">
             <Lightbulb size={15} />
             Personal mentoring
           </p>
           <h1 className="text-3xl font-semibold tracking-[-0.06em] sm:text-4xl">
             Need more guidance?
           </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-[#6f685c] sm:text-base">
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-[#666666] sm:text-base">
             Share what you are hoping to build or what feels difficult. We can
             help you understand the project, choose technologies, plan your
             steps, and get started. A mentor will contact you using your
             account email.
           </p>
           {projectResult?.status === "ready" ? (
-            <p className="mt-4 rounded-xl border border-[#e5d7b8] bg-[#fff9ed] px-4 py-3 text-sm text-[#6f685c]">
+            <p className="mt-4 rounded-xl border border-[#e4e4e2] bg-[#f7f7f6] px-4 py-3 text-sm text-[#666666]">
               Asking about{" "}
-              <span className="font-semibold text-[#24221e]">
+              <span className="font-semibold text-[#1b1b1b]">
                 {projectResult.data.title}
               </span>
             </p>
@@ -80,11 +80,11 @@ export default async function GuidancePage({
           </p>
         ) : null}
 
-        <section className="mt-6 rounded-[1.5rem] border border-[#e8e1d4] bg-[#faf7f0] p-5 sm:p-8">
+        <section className="mt-6 rounded-[1.5rem] border border-[#e4e4e2] bg-[#fcfcfb] p-5 sm:p-8">
           <h2 className="text-xl font-semibold tracking-[-0.04em]">
             Your contact details
           </h2>
-          <p className="mt-1 text-sm leading-6 text-[#77736a]">
+          <p className="mt-1 text-sm leading-6 text-[#666666]">
             Check the details below so we know how to reach you.
           </p>
           <GuidanceRequestForm

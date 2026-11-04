@@ -20,7 +20,7 @@ export default async function MyProfilePage() {
       }
     >
       <div className="mb-8 max-w-2xl">
-        <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#927016]">
+        <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#454545]">
           Your learning starting point
         </p>
         <h1 className="mt-2 text-3xl font-semibold tracking-[-0.06em]">
@@ -44,23 +44,23 @@ export default async function MyProfilePage() {
           </Link>
         </ProfileMessage>
       ) : (
-        <section className="rounded-3xl border border-[#e8e1d4] bg-[#faf7f0] p-6 sm:p-8">
-          <div className="flex flex-wrap items-start justify-between gap-4 border-b border-[#e8e1d4] pb-5">
+        <section className="rounded-3xl border border-[#e4e4e2] bg-[#fcfcfb] p-6 sm:p-8">
+          <div className="flex flex-wrap items-start justify-between gap-4 border-b border-[#e4e4e2] pb-5">
             <div className="flex items-center gap-3">
-              <span className="grid size-12 place-items-center rounded-2xl bg-[#f1e7cb] text-[#8d6810]">
+              <span className="grid size-12 place-items-center rounded-2xl bg-[#ebebea] text-[#454545]">
                 <GraduationCap size={23} />
               </span>
               <div>
                 <h2 className="text-lg font-semibold">
                   {profileResult.profile.fullName}
                 </h2>
-                <p className="mt-0.5 text-sm text-[#77736a]">
+                <p className="mt-0.5 text-sm text-[#666666]">
                   {profileResult.profile.collegeName}
                 </p>
               </div>
             </div>
             <Link
-              className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-[#e1d6c3] bg-[#fffdf8] px-4 text-sm font-semibold text-[#6e510d] no-underline hover:bg-[#fff5db]"
+              className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-[#e4e4e2] bg-[#ffffff] px-4 text-sm font-semibold text-[#555555] no-underline hover:bg-[#f1f1ef]"
               href="/onboarding?edit=1"
             >
               <PencilLine size={15} />
@@ -73,13 +73,13 @@ export default async function MyProfilePage() {
             <ProfileField label="Current semester / year" value={profileResult.profile.currentYear} />
             <ProfileField label="Main project goal" value={profileResult.profile.projectGoal} />
             <div className="sm:col-span-2">
-              <dt className="text-xs font-semibold uppercase tracking-wide text-[#8a857a]">
+              <dt className="text-xs font-semibold uppercase tracking-wide text-[#777777]">
                 Areas of interest
               </dt>
               <dd className="mt-2 flex flex-wrap gap-2">
                 {profileResult.profile.interests.map((interest) => (
                   <span
-                    className="rounded-full bg-[#f1e7cb] px-3 py-1 text-xs font-medium text-[#765b1a]"
+                    className="rounded-full bg-[#ebebea] px-3 py-1 text-xs font-medium text-[#555555]"
                     key={interest}
                   >
                     {interest}
@@ -97,17 +97,17 @@ export default async function MyProfilePage() {
 function ProfileField({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <dt className="text-xs font-semibold uppercase tracking-wide text-[#8a857a]">
+      <dt className="text-xs font-semibold uppercase tracking-wide text-[#777777]">
         {label}
       </dt>
-      <dd className="mt-1 text-sm font-medium text-[#3d3932]">{value}</dd>
+      <dd className="mt-1 text-sm font-medium text-[#333333]">{value}</dd>
     </div>
   );
 }
 
 function ProfileMessage({ children }: { children: ReactNode }) {
   return (
-    <div className="rounded-2xl border border-[#ead6a9] bg-[#fff9ed] p-6 text-sm leading-6 text-[#765b1a]">
+    <div className="rounded-2xl border border-[#e4e4e2] bg-[#f7f7f6] p-6 text-sm leading-6 text-[#555555]">
       {children}
     </div>
   );

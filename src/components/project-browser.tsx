@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/project-card";
 import type { Project } from "@/lib/project-catalog";
 
 const controlClass =
-  "min-h-11 rounded-xl border border-[#ded7c9] bg-[#fffdf8] px-3 text-sm text-[#3d3932] outline-none focus:border-[#d6a72c] focus:ring-4 focus:ring-[#d6a72c]/15";
+  "min-h-11 rounded-xl border border-[#e2e2e0] bg-[#ffffff] px-3 text-sm text-[#333333] outline-none focus:border-[#e5e5e3] focus:ring-4 focus:ring-[#e5e5e3]/15";
 
 export function ProjectBrowser({
   projects,
@@ -38,10 +38,10 @@ export function ProjectBrowser({
     <>
       <section
         aria-label="Filter projects"
-        className="mb-6 grid max-w-2xl gap-4 rounded-2xl border border-[#e8e1d4] bg-[#faf7f0] p-4 sm:grid-cols-2 sm:p-5"
+        className="mb-6 grid max-w-2xl gap-4 rounded-2xl border border-[#e4e4e2] bg-[#fcfcfb] p-4 sm:grid-cols-2 sm:p-5"
       >
         <label>
-          <span className="mb-2 block text-sm font-semibold text-[#4b473f]">
+          <span className="mb-2 block text-sm font-semibold text-[#404040]">
             Project level
           </span>
           <select
@@ -56,7 +56,7 @@ export function ProjectBrowser({
           </select>
         </label>
         <label>
-          <span className="mb-2 block text-sm font-semibold text-[#4b473f]">
+          <span className="mb-2 block text-sm font-semibold text-[#404040]">
             Difficulty
           </span>
           <select
@@ -72,7 +72,7 @@ export function ProjectBrowser({
         </label>
         {hasFilters ? (
           <button
-            className="inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-xl border border-[#e5dccb] bg-[#fffdf8] px-4 text-sm font-semibold text-[#6f685c] transition hover:border-[#d6a72c] hover:bg-[#f5f0e6] active:scale-[0.98] sm:col-span-2"
+            className="inline-flex min-h-11 w-fit items-center justify-center gap-2 rounded-xl border border-[#e4e4e2] bg-[#ffffff] px-4 text-sm font-semibold text-[#666666] transition hover:border-[#e5e5e3] hover:bg-[#f7f7f5] active:scale-[0.98] sm:col-span-2"
             onClick={clearFilters}
             type="button"
           >
@@ -81,7 +81,7 @@ export function ProjectBrowser({
         ) : null}
       </section>
 
-      <div className="mb-4 text-sm text-[#77736a]" aria-live="polite" aria-atomic="true">
+      <div className="mb-4 text-sm text-[#666666]" aria-live="polite" aria-atomic="true">
         Showing {filteredProjects.length}{" "}
         {filteredProjects.length === 1 ? "project" : "projects"}
       </div>
@@ -92,13 +92,13 @@ export function ProjectBrowser({
           ))}
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-[#d9cfba] bg-[#faf7f0] p-9 text-center">
+        <div className="rounded-2xl border border-dashed border-[#e4e4e2] bg-[#fcfcfb] p-9 text-center">
           <h2 className="font-semibold">No projects match those filters</h2>
-          <p className="mt-2 text-sm text-[#77736a]">
+          <p className="mt-2 text-sm text-[#666666]">
             Clear your filters to see more project ideas.
           </p>
           <button
-            className="mt-4 rounded-lg bg-[#d6a72c] px-4 py-2 text-sm font-semibold text-[#24221e] transition-transform active:scale-[0.98] hover:bg-[#e0b53e]"
+            className="mt-4 rounded-lg bg-[#e5e5e3] px-4 py-2 text-sm font-semibold text-[#1b1b1b] transition-transform active:scale-[0.98] hover:bg-[#d8d8d5]"
             onClick={clearFilters}
             type="button"
           >

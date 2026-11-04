@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f0e6;
-  --card: #faf7f0;
-  --accent: #d6a72c;
-  --accent-dark: #b98b1d;
-  --text: #24221e;
-  --muted: #77736a;
-  --line: #e8e1d4;
+  --background: #f7f7f5;
+  --card: #fcfcfb;
+  --accent: #e5e5e3;
+  --accent-dark: #555555;
+  --text: #1b1b1b;
+  --muted: #666666;
+  --line: #e4e4e2;
   --font-sans: var(--font-geist-sans);
 }
 
@@ -40,7 +40,7 @@ input {
 }
 
 ::selection {
-  background: #e8c86f;
+  background: #d8d8d5;
   color: var(--text);
 }
 
@@ -60,8 +60,8 @@ input {
   overflow: hidden;
   padding: clamp(2rem, 5vw, 4.75rem);
   background:
-    radial-gradient(ellipse at 70% 56%, rgb(214 167 44 / 13%), transparent 37%),
-    #f5f0e6;
+    radial-gradient(ellipse at 70% 56%, rgb(0 0 0 / 4%), transparent 37%),
+    #f7f7f5;
 }
 
 .auth-story::before,
@@ -70,7 +70,7 @@ input {
   z-index: 0;
   width: 420px;
   height: 420px;
-  border: 1px solid rgb(119 115 106 / 12%);
+  border: 1px solid rgb(0 0 0 / 10%);
   border-radius: 50%;
   content: "";
   pointer-events: none;
@@ -107,17 +107,6 @@ input {
   text-decoration: none;
 }
 
-.brand-symbol {
-  display: grid;
-  width: 2.45rem;
-  height: 2.45rem;
-  place-items: center;
-  border-radius: 0.9rem;
-  background: var(--accent);
-  box-shadow: 0 7px 18px rgb(161 119 19 / 20%);
-  color: #fffdf8;
-}
-
 .story-copy {
   max-width: 39rem;
   margin: clamp(3rem, 7vh, 5rem) 0 0;
@@ -129,7 +118,7 @@ input {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1.2rem;
-  color: #94701b;
+  color: #454545;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -146,7 +135,7 @@ input {
 }
 
 .story-heading span {
-  color: #a77c13;
+  color: #454545;
 }
 
 .story-description {
@@ -174,12 +163,12 @@ input {
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  color: #8a857a;
+  color: #777777;
   font-size: 0.8rem;
 }
 
 .story-bottom svg {
-  color: #a77c13;
+  color: #454545;
 }
 
 .auth-panel {
@@ -189,7 +178,7 @@ input {
   justify-content: center;
   padding: clamp(1.5rem, 4vw, 4rem);
   background: var(--card);
-  box-shadow: -20px 0 60px rgb(64 53 28 / 5%);
+  box-shadow: -20px 0 60px rgb(0 0 0 / 5%);
 }
 
 .auth-panel-inner {
@@ -224,14 +213,14 @@ input {
 }
 
 .auth-link {
-  color: #8d6810;
+  color: #454545;
   font-weight: 650;
   text-decoration: none;
   text-underline-offset: 3px;
 }
 
 .auth-link:hover {
-  color: #6f5108;
+  color: #555555;
   text-decoration: underline;
 }
 
@@ -239,8 +228,8 @@ input {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 1.3rem;
-  background: #fffdf8;
-  box-shadow: 0 20px 50px rgb(59 46 20 / 8%);
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 8%);
   padding: 1.5rem;
 }
 
@@ -251,7 +240,7 @@ input {
 }
 
 .auth-field label {
-  color: #4b473f;
+  color: #404040;
   font-size: 0.84rem;
   font-weight: 650;
 }
@@ -259,22 +248,22 @@ input {
 .auth-input {
   width: 100%;
   min-height: 3rem;
-  border: 1px solid #ded7c9;
+  border: 1px solid #e2e2e0;
   border-radius: 0.8rem;
   outline: none;
-  background: #fffefa;
+  background: #ffffff;
   color: var(--text);
   padding: 0 0.9rem;
   transition: border-color 150ms ease, box-shadow 150ms ease;
 }
 
 .auth-input::placeholder {
-  color: #a09a8e;
+  color: #858585;
 }
 
 .auth-input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgb(214 167 44 / 17%);
+  box-shadow: 0 0 0 3px rgb(0 0 0 / 8%);
 }
 
 .auth-submit {
@@ -287,7 +276,7 @@ input {
   border: 0;
   border-radius: 0.82rem;
   background: var(--accent);
-  color: #2b261b;
+  color: #1b1b1b;
   cursor: pointer;
   font-size: 0.93rem;
   font-weight: 700;
@@ -296,8 +285,8 @@ input {
 
 .auth-submit:hover:not(:disabled) {
   transform: translateY(-1px);
-  background: #e0b53e;
-  box-shadow: 0 8px 18px rgb(161 119 19 / 18%);
+  background: #d8d8d5;
+  box-shadow: 0 8px 18px rgb(0 0 0 / 8%);
 }
 
 .auth-submit:disabled {
@@ -328,7 +317,7 @@ input {
   align-items: center;
   gap: 0.4rem;
   margin-top: 1rem;
-  color: #8d6810;
+  color: #454545;
   font-size: 0.86rem;
   font-weight: 650;
   text-decoration: none;
@@ -348,7 +337,7 @@ input {
 .auth-signout {
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: #fffdf8;
+  background: #ffffff;
   color: var(--muted);
   cursor: pointer;
   padding: 0.5rem 0.85rem;
@@ -415,12 +404,6 @@ input {
     font-size: 0.95rem;
   }
 
-  .brand-symbol {
-    width: 2.15rem;
-    height: 2.15rem;
-    border-radius: 0.75rem;
-  }
-
   .story-copy {
     margin: 1.7rem 0 0;
   }
@@ -455,7 +438,7 @@ input {
     flex: 1;
     align-items: flex-start;
     padding: 2.15rem 1.25rem 3rem;
-    box-shadow: 0 -12px 30px rgb(64 53 28 / 4%);
+    box-shadow: 0 -12px 30px rgb(0 0 0 / 4%);
   }
 
   .auth-panel-inner {

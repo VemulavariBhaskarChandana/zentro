@@ -39,7 +39,7 @@ export function PasswordResetForm() {
   if (sent) {
     return (
       <div className="auth-card">
-        <div className="mb-4 grid size-11 place-items-center rounded-full bg-[#f5f0e6] text-[#927016]">
+        <div className="mb-4 grid size-11 place-items-center rounded-full bg-[#f7f7f5] text-[#454545]">
           <MailCheck size={21} />
         </div>
         <h3 className="m-0 text-lg font-semibold tracking-tight">
